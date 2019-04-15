@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.miteksystems.mpnplugin" version="0.0.1">
+    <name>MiSnapPlugin</name>
+    <description>MiSnap Plugin Create By Runi Kovoor</description>
+    <license></license>
+    <keywords>cordova,MiSnap</keywords>
+    <js-module src="www/MiSnapPlugin.js" name="MiSnapPlugin">
+        <clobbers target="MiSnapPlugin" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="MiSnapPlugin">
+                <param name="ios-package" value="MiSnapPlugin"/>
+            </feature>
+        </config-file>
+        
+        <preference name="CAMERA_USAGE_DESCRIPTION" default="This app needs camera access"/>
+            <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+                <string>MiSnap uses camera to capture check images</string>
+            </config-file>
+
+        <framework src="src/ios/MiSnapSDK/MiSnapSDK.framework" custom="true" embed="true"/>
+        <framework src="src/ios/MiSnapSDK/MobileFlow.framework" custom="true" embed="true"/>
+        <framework src="src/ios/MiSnapSDK/MiSnapSDKCamera.framework" custom="true" embed="true"/>
+        <framework src="src/ios/MiSnapSDK/MiSnapSDKScience.framework" custom="true" embed="true"/>
+        <framework src="src/ios/MiSnapSDK/MiSnapSDKMibiData.framework" custom="true" embed="true"/>
+        <framework src="AudioToolbox.framework" />
+        <framework src="AVFoundation.framework" />
+        <framework src="CoreGraphics.framework" />
+        <framework src="CoreMedia.framework" />
+        <framework src="CoreVideo.framework" />
+        <framework src="MobileCoreServices.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="OpenGLES.framework" />
+        <framework src="Security.framework" />
+        <framework src="ImageIO.framework" />
+        <framework src="Foundation.framework" />
+        <framework src="UIKit.framework" />
+        
+        <!--   UX Files     -->
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Files/MiSnapSDKOverlayView.h" />
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Files/MiSnapSDKOverlayView.m" />
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Files/MiSnapSDKTutorialViewController.h" />
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Files/MiSnapSDKTutorialViewController.m" />
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Files/MiSnapSDKViewController.h" />
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Files/MiSnapSDKViewController.m" />
+        
+        <!--   UX2 Files     -->
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/MiSnapSDKOverlayViewUX2.h" />
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/MiSnapSDKOverlayViewUX2.m" />
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/MiSnapSDKViewControllerUX2.h" />
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/MiSnapSDKViewControllerUX2.m" />
+        
+        <!--   UX1 Files     -->
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX1_Files/MiSnapSDKOverlayViewUX1.h" />
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX1_Files/MiSnapSDKOverlayViewUX1.m" />
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX1_Files/MiSnapSDKViewControllerUX1.h" />
+        <source-file src="src/ios/MiSnapSDK/MiSnapUX/UX1_Files/MiSnapSDKViewControllerUX1.m" />
+
+        <!--   MiSnap UX2 Storyboard     -->
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Storyboard/MiSnapUX2.storyboard" />
+        
+        <!--   MiSnap UX2 Resources     -->
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_branding.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_button_back.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_button_back_to_auto.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_button_capture.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_button_continue.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_button_flash_auto.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_button_flash_off.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_button_flash_on.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_menu_bottom.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_menu_top.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_powered_by_mitek_overlay.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_button_help.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_corner_off.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/misnap_en_corner_on.png" />
+
+        <!--   Wink Animation    -->
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_10.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_11.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_12.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_13.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_14.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_15.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_16.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_17.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_18.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_19.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_20.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_21.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_22.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_23.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_24.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_25.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_26.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_27.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_28.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_29.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_30.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_31.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_32.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_33.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX2_Files/Resources/wink/wink_34.png" />
+        
+        <!--   MiSnap Localizable String File     -->
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Resources/en.lproj/MiSnapSDKLocalizable.strings" />
+        
+        <!--   MiSnap Snap sound     -->
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Resources/photoshutter.wav" />
+        
+        <!--   MiSnap Misc.     -->
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Resources/background-dots.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Resources/misnap_tutorial_red_arrow@2x.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Resources/misnap_tutorial_red_arrow@3x.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Resources/checkbox_checked.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Resources/checkbox_unchecked.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Resources/ghost_check_back_portrait.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Resources/ghost_check_back.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Resources/ghost_check_front_portrait.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX_Resources/ghost_check_front.png" />
+        <resource-file src="src/ios/MiSnapSDK/MiSnapUX/UX1_Files/Resources/camera_cancel_icon.png" />
+        
+        
+        <!--   End MiSnap Stuff     -->
+
+        <header-file src="src/ios/MiSnapPlugin.h" />
+        <source-file src="src/ios/MiSnapPlugin.m" />
+
+    </platform>
+
+</plugin>

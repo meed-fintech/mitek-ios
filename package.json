@@ -1,0 +1,19 @@
+{
+  "name": "MiSnapPlugin",
+  "version": "1.0.0",
+  "description": "MiSnap Plugin Create By Runi Kovoor",
+  "cordova": {
+    "id": "com.miteksystems.iosplugin.misnap",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "MiSnap",
+    "ios",
+    "cordova-ios"
+  ],
+  "author": "Runi Kovoor",
+  "license": "ISC"
+}
