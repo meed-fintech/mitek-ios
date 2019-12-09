@@ -281,6 +281,18 @@
 
     [self.torchButton setBackgroundImage:torchImage forState:UIControlStateNormal];
     [self.torchButton setAccessibilityLabel:torchAccessibilityLabel];
+    
+    if ([self.docCaptureParams.documentType isEqualToString:kMiSnapDocumentTypeDriverLicense] ||
+        [self.docCaptureParams.documentType isEqualToString:kMiSnapDocumentTypeIdCardFront] ||
+        [self.docCaptureParams.documentType isEqualToString:kMiSnapDocumentTypeIdCardBack] ||
+        [self.docCaptureParams.documentType isEqualToString:kMiSnapDocumentTypePassport])
+    {
+        self.torchButton.hidden = YES;
+    }
+    else
+    {
+        self.torchButton.hidden = NO;
+    }
 
     [self performSelector:@selector(sayText:) withObject:self.ghostImageView.accessibilityLabel afterDelay:2.0];
 

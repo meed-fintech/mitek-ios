@@ -254,6 +254,8 @@
     self.successImageView.hidden = YES;
     self.successImageView.layer.cornerRadius = 12.0f;
     [self.successLabel setText:[self.resourceLocator getLocalizedString:@"dialog_success"]];
+    // iOS 13. Label text color set to black to show on white background in both light and dark modes
+    [self.successLabel setTextColor:[UIColor blackColor]];
     self.successLabel.hidden = YES;
 
     self.ghostImageView.hidden = YES;
@@ -332,7 +334,19 @@
         [self.torchButton setBackgroundImage:[self getResourcePNG:@"misnap_en_button_flash_on"] forState:UIControlStateNormal];
         [self.torchButton setAccessibilityLabel:[self.resourceLocator getLocalizedString:@"misnap_overlay_flash_on"]];
     }
-    self.torchLabel.hidden = NO;
+    
+    if ([self.params[kMiSnapDocumentType] isEqualToString:kMiSnapDocumentTypeDriverLicense] ||
+        [self.params[kMiSnapDocumentType] isEqualToString:kMiSnapDocumentTypeIdCardFront] ||
+        [self.params[kMiSnapDocumentType] isEqualToString:kMiSnapDocumentTypeIdCardBack] ||
+        [self.params[kMiSnapDocumentType] isEqualToString:kMiSnapDocumentTypePassport])
+    {
+        self.torchButton.hidden = YES;
+        self.torchLabel.hidden = YES;
+    }
+    else
+    {
+        self.torchLabel.hidden = NO;
+    }
 
     [self setGhostImage:self.params[kMiSnapDocumentType] withOrientation:[UIApplication sharedApplication].statusBarOrientation];
 
@@ -428,6 +442,14 @@
 
 - (void)manageTorchButton:(BOOL)hasTorch
 {
+    if ([self.params[kMiSnapDocumentType] isEqualToString:kMiSnapDocumentTypeDriverLicense] ||
+        [self.params[kMiSnapDocumentType] isEqualToString:kMiSnapDocumentTypeIdCardFront] ||
+        [self.params[kMiSnapDocumentType] isEqualToString:kMiSnapDocumentTypeIdCardBack] ||
+        [self.params[kMiSnapDocumentType] isEqualToString:kMiSnapDocumentTypePassport])
+    {
+        return;
+    }
+    
     [super manageTorchButton:hasTorch];
     self.torchLabel.hidden = !hasTorch;
 }

@@ -61,5 +61,9 @@
  */
 @property (nonatomic, strong, readonly) UIImage *grayCroppedDewarped;
 
+/**
+ *  Color cropped and dewarped image of four-corner region
+ */
+@property (nonatomic, strong, readonly) UIImage *colorCroppedDewarped;
 
 @end

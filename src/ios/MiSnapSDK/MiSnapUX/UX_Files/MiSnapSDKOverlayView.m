@@ -20,7 +20,7 @@
 
 - (UIImage *)getResourcePNG:(NSString *)filename
 {
-    NSBundle* bundle = [NSBundle mainBundle];
+    NSBundle* bundle = [NSBundle bundleForClass:[self class]];
     NSString* pathname = [bundle pathForResource:filename ofType:@"png"];
     UIImage* image = [UIImage imageNamed:pathname];
     
@@ -610,6 +610,14 @@
 
 - (void)manageTorchButton:(BOOL)hasTorch
 {
+    if ([self.docCaptureParams.documentType isEqualToString:kMiSnapDocumentTypeDriverLicense] ||
+        [self.docCaptureParams.documentType isEqualToString:kMiSnapDocumentTypeIdCardFront] ||
+        [self.docCaptureParams.documentType isEqualToString:kMiSnapDocumentTypeIdCardBack] ||
+        [self.docCaptureParams.documentType isEqualToString:kMiSnapDocumentTypePassport])
+    {
+        return;
+    }
+
     self.torchButton.hidden = !hasTorch;
 }
 

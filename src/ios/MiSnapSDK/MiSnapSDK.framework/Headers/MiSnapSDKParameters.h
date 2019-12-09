@@ -26,7 +26,7 @@
  @unsorted
  */
 
-#define MISNAP_VERSION @"4.2.2"
+#define MISNAP_VERSION @"4.3.2"
 
 // MiSnap Capture modes
 typedef NS_ENUM(NSInteger, MiSnapCaptureMode) {

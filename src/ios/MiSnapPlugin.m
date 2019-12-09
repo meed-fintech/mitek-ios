@@ -15,6 +15,7 @@
     NSString* side = [command argumentAtIndex:0];
     
     MiSnapSDKViewController *mvc = (MiSnapSDKViewController *)[[UIStoryboard storyboardWithName:@"MiSnapUX2" bundle:nil] instantiateViewControllerWithIdentifier:@"MiSnapSDKViewControllerUX2"];
+    mvc.modalPresentationStyle = UIModalPresentationFullScreen;
     mvc.delegate=self;
     if([side isEqualToString:@"CheckFront"])
     {

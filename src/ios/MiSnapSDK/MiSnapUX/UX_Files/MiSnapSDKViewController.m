@@ -494,8 +494,8 @@
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.cameraView updatePreviewLayer:self.statusbarOrientation];
+        NSLog(@"CameraView start");
         [self.cameraView start];
-        
         NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
         if ([defaults objectForKey:@"MiSnapShowTutorial"] == nil)
         {
@@ -628,6 +628,13 @@
 
 #pragma mark - MiSnapCaptureViewDelegate callbacks
 
+- (void)miSnapCaptureViewReceivingCameraOutput:(MiSnapSDKCaptureView *)captureView
+{
+    NSLog(@"MSVC miSnapCaptureViewReceivingCameraOutput");
+    // Start the torch after the camera has started and camera output is being received
+    [self.captureView startTorch];
+}
+
 - (void)miSnapCaptureViewCaptureStillImage
 {
     [self.cameraView captureStillImageAsynchronouslyWithCompletionHandler:^(CMSampleBufferRef  _Nullable imageSampleBuffer, NSError * _Nullable error) {
@@ -637,7 +644,7 @@
 
 - (void)miSnapCaptureViewTurnTorchOn
 {
-     [self.captureView turnTorchOn:[self.cameraView turnTorchOn]];
+    [self.captureView turnTorchOn:[self.cameraView turnTorchOn]];
 }
 
 - (void)miSnapCaptureViewTurnTorchOff
@@ -1003,6 +1010,7 @@
     __weak MiSnapSDKViewController* wself = self;
     
     dispatch_async(dispatch_get_main_queue(), ^{
+        [wself.cameraView turnTorchOff];
         [wself.captureView shutdownForHelp];
         [wself showHelpView];
     });
@@ -1210,6 +1218,8 @@
 {
     __weak MiSnapSDKViewController* wself = self;
     
+    self.shouldSkipFrames = YES;
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         wself.captureView.hidden = YES;
         wself.overlayView.hidden = YES;
@@ -1301,7 +1311,9 @@
                 [hintLabel setFont:[UIFont fontWithName:@"Helvetica" size:fontSize]];
                 [hintLabel setNumberOfLines:6];
                 
-                
+                // iOS 13. Label text color set to black to show on white background in both light and dark modes
+                [hintLabel setTextColor:[UIColor blackColor]];
+
                 [hintView addSubview:hintPointerView];
                 [hintView addSubview:hintLabel];
                 
@@ -1338,6 +1350,7 @@
         wself.helpViewController.timeoutDelay = 0;
         
         wself.helpViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        wself.helpViewController.modalPresentationStyle = UIModalPresentationFullScreen;
         
         if (wself.navigationController != nil)
         {

@@ -225,6 +225,10 @@
         {
             offset = 35;
         }
+        else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        {
+            offset = 30;
+        }
         
         self.dontShowLabel.center = CGPointMake(size.width * 0.5, size.height - self.buttonBackgroundView.frame.size.height - self.dontShowLabel.frame.size.height - offset);
         self.checkboxImageView.center = CGPointMake(self.dontShowLabel.center.x - self.dontShowLabel.frame.size.width * 0.5 - self.checkboxImageView.frame.size.width * 0.5 - 5, self.dontShowLabel.center.y);
@@ -381,9 +385,13 @@
     {
         offset = 35;
     }
+    else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        offset = 30;
+    }
     
-    NSString *dontShowString = @"Don't show this screen again";
-    CGFloat dontShowAgainFontSize = 17.0;
+    NSString *dontShowString = [self.resourceLocator getLocalizedString:@"misnap_tutorial_do_not_show_again"];
+    CGFloat dontShowAgainFontSize = 16.0;
     
     CGSize maximumSize = CGSizeMake(screenWidth * 0.9, 50);
     CGRect dontShowRect = [dontShowString boundingRectWithSize:maximumSize options:NSStringDrawingTruncatesLastVisibleLine attributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:dontShowAgainFontSize] } context:nil];
@@ -393,6 +401,7 @@
     self.dontShowLabel.center = CGPointMake(screenWidth * 0.5, screenHeight - self.buttonBackgroundView.frame.size.height - self.dontShowLabel.frame.size.height - offset);
     self.dontShowLabel.text = dontShowString;
     self.dontShowLabel.font = [UIFont systemFontOfSize:dontShowAgainFontSize];
+    [self.dontShowLabel setTextColor:[UIColor blackColor]];
     
     self.checkboxImageView = [[UIImageView alloc] init];
     self.checkboxImageView.image = [[MiSnapSDKResourceLocator initWithLanguageKey:self.languageOverride] getLocalizedImage:@"checkbox_unchecked"];

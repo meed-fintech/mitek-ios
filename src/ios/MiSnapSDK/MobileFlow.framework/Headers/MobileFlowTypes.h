@@ -73,9 +73,14 @@ typedef NS_OPTIONS(NSInteger, MobileFlowProcessOptions)
 	MF_PROCESS_GRAY_DEWARP			= 1 << 4,
 	
 	/**
+	 *  Dewarp and deskew the color image using four-corner results
+	 */
+	MF_PROCESS_COLOR_DEWARP			= 1 << 5,
+	
+	/**
 	 *  Process check MICR generically (USA/non-USA allowed)
 	 */
-	MF_PROCESS_GENERIC_CHECK		= 1 << 5,
+	MF_PROCESS_GENERIC_CHECK		= 1 << 6,
 	
 	/**
 	 *  Performs typical mobile analysis stages
@@ -85,7 +90,7 @@ typedef NS_OPTIONS(NSInteger, MobileFlowProcessOptions)
 	/**
 	 *  Perform all processing steps
 	 */
-	MF_PROCESS_ALL					= (MF_PROCESS_MOBILE | MF_PROCESS_GRAY_DEWARP),
+	MF_PROCESS_ALL					= (MF_PROCESS_MOBILE | MF_PROCESS_GRAY_DEWARP | MF_PROCESS_COLOR_DEWARP),
 };
 
 

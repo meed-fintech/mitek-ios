@@ -25,6 +25,7 @@
 
 "dialog_success"                        = "Éxito!";
 
+"misnap_tutorial_do_not_show_again"     = "No use esta misma pantalla de nuevo";
 "misnap_tutorial_check"                 = "Centre el cheque en la pantalla. No lo mueva, le tomaremos la foto";
 "misnap_tutorial_document"              = "Centre el documento en la pantalla. No lo mueva, le tomaremos la foto";
 

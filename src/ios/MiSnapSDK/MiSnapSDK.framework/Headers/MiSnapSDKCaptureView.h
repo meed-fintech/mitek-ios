@@ -30,6 +30,10 @@
 
 @optional
 
+/*! Occurs when the camera is succesfully started and the miSnapCaptureView is receiving sampleBuffer frames
+ This event allows the app developer to perform other capure device operations safely after the camera has started. e.g. turning torch on/off
+ */
+- (void)miSnapCaptureViewReceivingCameraOutput:(MiSnapSDKCaptureView *)captureView;
 
 /*! Occurs when the user taps the manual capture button.
     Once the image is ready, the miSnapCaptureView:encodedImage:originaImage:andResults: will be called.
@@ -103,6 +107,7 @@
 - (void)captureCurrentFrame;
 - (void)setCaptureParams:(NSDictionary*)params;
 - (BOOL)getTorchStatus;
+- (void)startTorch; // Handles the torch at the start the session
 - (void)turnTorchOn:(BOOL)isOn;
 - (void)turnTorchOff:(BOOL)isOff;
 

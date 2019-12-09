@@ -18,6 +18,7 @@
 #import <MobileFlow/MobileFlowMicrResult.h>
 #import <MobileFlow/MobileFlowDocParameters.h>
 #import <MobileFlow/MobileFlowAnalyzer.h>
+#import <MobileFlow/MobileFlowSpikeNormalizer.h>
 
 /**
  *  The Mobile Flow framework provides a convenient interface to the Mitek

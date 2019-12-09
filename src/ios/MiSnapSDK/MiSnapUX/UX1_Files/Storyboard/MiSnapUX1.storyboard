@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JtR-gk-qTt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JtR-gk-qTt">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -78,7 +76,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="441" placeholderIntrinsicHeight="48" image="gauge_fill_00.png" translatesAutoresizingMaskIntoConstraints="NO" id="LUb-t4-PCh" userLabel="Image View - Gauge">
-                                        <rect key="frame" x="110.66666666666669" y="344.66666666666669" width="515" height="56"/>
+                                        <rect key="frame" x="110.33333333333331" y="344.66666666666669" width="515.33333333333348" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="LUb-t4-PCh" secondAttribute="height" multiplier="250:27" id="3o9-lq-rSJ"/>
                                             <constraint firstAttribute="width" constant="250" id="Wja-AI-Skb">
@@ -131,7 +129,7 @@
                                         </accessibility>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYk-hx-zZj">
-                                        <rect key="frame" x="213.66666666666666" y="14.333333333333336" width="308.66666666666674" height="42"/>
+                                        <rect key="frame" x="213.33333333333334" y="14.333333333333336" width="309.33333333333326" height="42"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="g6i-OY-5yB"/>
@@ -154,7 +152,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fu-87-Uts" userLabel="Image View - Snap Animation">
-                                        <rect key="frame" x="297" y="123.66666666666669" width="143" height="167"/>
+                                        <rect key="frame" x="296.66666666666669" y="123.66666666666669" width="143" height="167"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9fu-87-Uts" secondAttribute="height" multiplier="143:167" id="Yav-Yz-hvg"/>
                                             <constraint firstAttribute="width" constant="143" id="kFk-K4-hvO"/>
@@ -183,7 +181,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVj-Y0-91Y" userLabel="Button - Help">
-                                        <rect key="frame" x="607.66666666666663" y="17.333333333333329" width="36" height="36"/>
+                                        <rect key="frame" x="681.33333333333337" y="17.333333333333329" width="36" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="AcY-Ao-MU4"/>
                                             <constraint firstAttribute="width" secondItem="nVj-Y0-91Y" secondAttribute="height" multiplier="1:1" id="MjW-HK-Noy"/>
@@ -197,7 +195,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoJ-Xa-AxU" userLabel="Button - Torch">
-                                        <rect key="frame" x="662.66666666666663" y="17.333333333333329" width="36" height="36"/>
+                                        <rect key="frame" x="626" y="17.333333333333329" width="36" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="Uhl-sg-dC1"/>
                                             <constraint firstAttribute="width" secondItem="JoJ-Xa-AxU" secondAttribute="height" multiplier="1:1" id="aeD-LF-5GL"/>
@@ -251,9 +249,9 @@
                                     <constraint firstItem="KAC-PF-4T0" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" id="8Rq-4t-cSJ"/>
                                     <constraint firstItem="HEl-nL-K3m" firstAttribute="top" secondItem="AeI-Au-y9p" secondAttribute="top" id="BWa-ao-aPp"/>
                                     <constraint firstItem="JoJ-Xa-AxU" firstAttribute="centerY" secondItem="AeI-Au-y9p" secondAttribute="centerY" multiplier="0.1" id="C8I-Rc-yxa"/>
-                                    <constraint firstItem="JoJ-Xa-AxU" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" multiplier="1.85" id="IMd-oO-j3M"/>
+                                    <constraint firstItem="JoJ-Xa-AxU" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" multiplier="1.75" id="IMd-oO-j3M"/>
                                     <constraint firstItem="LUb-t4-PCh" firstAttribute="centerY" secondItem="AeI-Au-y9p" secondAttribute="centerY" multiplier="1.8" id="Kuc-wt-34u"/>
-                                    <constraint firstItem="nVj-Y0-91Y" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" multiplier="1.7" id="LT6-l8-USV"/>
+                                    <constraint firstItem="nVj-Y0-91Y" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" multiplier="1.9" id="LT6-l8-USV"/>
                                     <constraint firstAttribute="bottom" secondItem="HEl-nL-K3m" secondAttribute="bottom" id="Msd-om-Z5X"/>
                                     <constraint firstItem="l8c-cC-f8B" firstAttribute="centerY" secondItem="AeI-Au-y9p" secondAttribute="centerY" multiplier="0.1" id="N6Z-oc-bxu"/>
                                     <constraint firstItem="KAC-PF-4T0" firstAttribute="centerY" secondItem="AeI-Au-y9p" secondAttribute="centerY" multiplier="1.85" id="NPg-fa-6go"/>
@@ -269,10 +267,10 @@
                                     <constraint firstItem="9fu-87-Uts" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" id="cdh-WH-hdW"/>
                                     <constraint firstItem="wYk-hx-zZj" firstAttribute="centerY" secondItem="AeI-Au-y9p" secondAttribute="centerY" multiplier="0.06" id="fO8-B4-cfz"/>
                                     <constraint firstItem="ddS-Ld-5wS" firstAttribute="centerY" secondItem="AeI-Au-y9p" secondAttribute="centerY" multiplier="1.92" id="fYW-q8-1BP"/>
-                                    <constraint firstItem="JoJ-Xa-AxU" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" multiplier="1.8" id="fgt-S2-uZF"/>
+                                    <constraint firstItem="JoJ-Xa-AxU" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" multiplier="1.55" id="fgt-S2-uZF"/>
                                     <constraint firstItem="JoJ-Xa-AxU" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" multiplier="1.83" id="fsy-ch-jMx"/>
                                     <constraint firstItem="l8c-cC-f8B" firstAttribute="centerY" secondItem="AeI-Au-y9p" secondAttribute="centerY" multiplier="0.06" id="gSi-eT-But"/>
-                                    <constraint firstItem="nVj-Y0-91Y" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" multiplier="1.55" id="hLt-nQ-bww"/>
+                                    <constraint firstItem="nVj-Y0-91Y" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" multiplier="1.8" id="hLt-nQ-bww"/>
                                     <constraint firstItem="ddS-Ld-5wS" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" id="i2r-UD-Fcj"/>
                                     <constraint firstItem="nVj-Y0-91Y" firstAttribute="centerX" secondItem="AeI-Au-y9p" secondAttribute="centerX" multiplier="1.68" id="i3S-1E-q2l"/>
                                     <constraint firstItem="nVj-Y0-91Y" firstAttribute="centerY" secondItem="AeI-Au-y9p" secondAttribute="centerY" multiplier="0.06" id="iFf-8l-Us7"/>
@@ -758,7 +756,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="441" placeholderIntrinsicHeight="48" image="gauge_fill_00.png" translatesAutoresizingMaskIntoConstraints="NO" id="Huq-TP-695" userLabel="Image View - Gauge">
-                                        <rect key="frame" x="111.33333333333331" y="344.66666666666669" width="515" height="56"/>
+                                        <rect key="frame" x="110.33333333333331" y="344.66666666666669" width="515.33333333333348" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Huq-TP-695" secondAttribute="height" multiplier="147:16" id="9zg-qE-j7j"/>
                                             <constraint firstAttribute="width" secondItem="Huq-TP-695" secondAttribute="height" multiplier="147:16" id="Dmo-Ws-nzU"/>
@@ -811,7 +809,7 @@
                                         </accessibility>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hG-G1-t8I">
-                                        <rect key="frame" x="213.66666666666663" y="14.333333333333336" width="309" height="42"/>
+                                        <rect key="frame" x="213.33333333333334" y="14.333333333333336" width="309.33333333333326" height="42"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="rot-rq-eKW"/>
@@ -834,7 +832,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JyC-Yq-HTO" userLabel="Image View - Snap Animation">
-                                        <rect key="frame" x="297" y="124" width="143" height="167"/>
+                                        <rect key="frame" x="296.66666666666669" y="123.66666666666669" width="143" height="167"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="143" id="5I9-OQ-Atc"/>
                                             <constraint firstAttribute="width" secondItem="JyC-Yq-HTO" secondAttribute="height" multiplier="143:167" id="xve-m1-J6y"/>
@@ -863,7 +861,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFK-La-ETw" userLabel="Button - Help">
-                                        <rect key="frame" x="607.66666666666663" y="17.333333333333329" width="36" height="36"/>
+                                        <rect key="frame" x="681.33333333333337" y="17.333333333333329" width="36" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="36" id="8Dl-fZ-C7g"/>
                                             <constraint firstAttribute="width" secondItem="OFK-La-ETw" secondAttribute="height" multiplier="1:1" id="m7h-bS-mUj"/>
@@ -877,7 +875,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuG-cu-ibZ" userLabel="Button - Torch">
-                                        <rect key="frame" x="662.66666666666663" y="17.333333333333329" width="36" height="36"/>
+                                        <rect key="frame" x="626" y="17.333333333333329" width="36" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="QuG-cu-ibZ" secondAttribute="height" multiplier="1:1" id="hdA-qg-BVz"/>
                                             <constraint firstAttribute="width" constant="36" id="mlU-rz-nne"/>
@@ -926,7 +924,7 @@
                                     <constraint firstItem="Huq-TP-695" firstAttribute="centerX" secondItem="KRx-PY-y8a" secondAttribute="centerX" id="A7K-bk-QWZ"/>
                                     <constraint firstItem="OFK-La-ETw" firstAttribute="centerY" secondItem="KRx-PY-y8a" secondAttribute="centerY" multiplier="0.06" id="BSp-ag-1I2"/>
                                     <constraint firstItem="8tQ-Ao-5QV" firstAttribute="centerY" secondItem="KRx-PY-y8a" secondAttribute="centerY" multiplier="0.1" id="Bhi-ow-rJt"/>
-                                    <constraint firstItem="OFK-La-ETw" firstAttribute="centerX" secondItem="KRx-PY-y8a" secondAttribute="centerX" multiplier="1.7" id="Bpc-2c-2zx"/>
+                                    <constraint firstItem="OFK-La-ETw" firstAttribute="centerX" secondItem="KRx-PY-y8a" secondAttribute="centerX" multiplier="1.9" id="Bpc-2c-2zx"/>
                                     <constraint firstItem="Huq-TP-695" firstAttribute="width" secondItem="KRx-PY-y8a" secondAttribute="width" multiplier="0.7" id="FTC-pb-YHD"/>
                                     <constraint firstItem="BWj-6A-FX3" firstAttribute="centerY" secondItem="KRx-PY-y8a" secondAttribute="centerY" multiplier="1.81" id="G2m-1G-gef"/>
                                     <constraint firstItem="BWj-6A-FX3" firstAttribute="centerY" secondItem="KRx-PY-y8a" secondAttribute="centerY" multiplier="1.8" id="HUO-Nd-vma"/>
@@ -959,7 +957,7 @@
                                     <constraint firstItem="JyC-Yq-HTO" firstAttribute="centerY" secondItem="KRx-PY-y8a" secondAttribute="centerY" id="nkD-P6-oBe"/>
                                     <constraint firstItem="OFK-La-ETw" firstAttribute="centerX" secondItem="KRx-PY-y8a" secondAttribute="centerX" multiplier="1.68" id="pso-WQ-acd"/>
                                     <constraint firstItem="Cge-YB-D7M" firstAttribute="centerY" secondItem="KRx-PY-y8a" secondAttribute="centerY" multiplier="1.93" id="pyL-G2-6Jh"/>
-                                    <constraint firstItem="QuG-cu-ibZ" firstAttribute="centerX" secondItem="KRx-PY-y8a" secondAttribute="centerX" multiplier="1.85" id="smp-2U-Zrm"/>
+                                    <constraint firstItem="QuG-cu-ibZ" firstAttribute="centerX" secondItem="KRx-PY-y8a" secondAttribute="centerX" multiplier="1.75" id="smp-2U-Zrm"/>
                                     <constraint firstAttribute="trailing" secondItem="Wzu-Wb-8Os" secondAttribute="trailing" id="stK-X1-ecY"/>
                                     <constraint firstItem="9hG-G1-t8I" firstAttribute="centerY" secondItem="KRx-PY-y8a" secondAttribute="centerY" multiplier="0.1" id="usX-bl-2Nu"/>
                                     <constraint firstItem="BWj-6A-FX3" firstAttribute="centerX" secondItem="KRx-PY-y8a" secondAttribute="centerX" multiplier="1.88" id="wEI-TC-7KC"/>
@@ -987,18 +985,18 @@
                                         <exclude reference="hWU-Uk-Cyh"/>
                                         <exclude reference="lvJ-AW-lTT"/>
                                         <exclude reference="pyL-G2-6Jh"/>
-                                        <exclude reference="BSp-ag-1I2"/>
-                                        <exclude reference="Bpc-2c-2zx"/>
-                                        <exclude reference="Zy2-gw-rjf"/>
-                                        <exclude reference="bDJ-27-ViS"/>
-                                        <exclude reference="fxS-nq-C0e"/>
-                                        <exclude reference="pso-WQ-acd"/>
                                         <exclude reference="Xou-GR-RBf"/>
                                         <exclude reference="bHL-oP-Lbt"/>
                                         <exclude reference="d2x-px-SfA"/>
                                         <exclude reference="smp-2U-Zrm"/>
                                         <exclude reference="wu1-oK-bXz"/>
                                         <exclude reference="zYw-Lu-wpS"/>
+                                        <exclude reference="BSp-ag-1I2"/>
+                                        <exclude reference="Bpc-2c-2zx"/>
+                                        <exclude reference="Zy2-gw-rjf"/>
+                                        <exclude reference="bDJ-27-ViS"/>
+                                        <exclude reference="fxS-nq-C0e"/>
+                                        <exclude reference="pso-WQ-acd"/>
                                         <exclude reference="6ZO-gt-AE4"/>
                                         <exclude reference="A6w-7m-VST"/>
                                         <exclude reference="G2m-1G-gef"/>
@@ -1015,10 +1013,10 @@
                                         <include reference="FTC-pb-YHD"/>
                                         <include reference="IZb-jt-QDW"/>
                                         <include reference="hWU-Uk-Cyh"/>
-                                        <include reference="Bpc-2c-2zx"/>
-                                        <include reference="Zy2-gw-rjf"/>
                                         <include reference="d2x-px-SfA"/>
                                         <include reference="smp-2U-Zrm"/>
+                                        <include reference="Bpc-2c-2zx"/>
+                                        <include reference="Zy2-gw-rjf"/>
                                         <include reference="G2m-1G-gef"/>
                                         <include reference="wEI-TC-7KC"/>
                                     </mask>
@@ -1031,10 +1029,10 @@
                                         <include reference="Pkc-lt-a9z"/>
                                         <include reference="SXW-RH-OPl"/>
                                         <include reference="lvJ-AW-lTT"/>
-                                        <include reference="bDJ-27-ViS"/>
-                                        <include reference="fxS-nq-C0e"/>
                                         <include reference="Xou-GR-RBf"/>
                                         <include reference="zYw-Lu-wpS"/>
+                                        <include reference="bDJ-27-ViS"/>
+                                        <include reference="fxS-nq-C0e"/>
                                         <include reference="6ZO-gt-AE4"/>
                                         <include reference="HUO-Nd-vma"/>
                                     </mask>
@@ -1048,10 +1046,10 @@
                                         <include reference="I7d-EQ-Rrb"/>
                                         <exclude reference="g6y-v5-kzn"/>
                                         <include reference="pyL-G2-6Jh"/>
-                                        <include reference="BSp-ag-1I2"/>
-                                        <include reference="pso-WQ-acd"/>
                                         <include reference="bHL-oP-Lbt"/>
                                         <include reference="wu1-oK-bXz"/>
+                                        <include reference="BSp-ag-1I2"/>
+                                        <include reference="pso-WQ-acd"/>
                                         <include reference="A6w-7m-VST"/>
                                         <include reference="f7d-fv-Q56"/>
                                     </mask>
