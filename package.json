@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-misnap-ios",
-  "version": "1.0.2",
+  "name": "cordova-plugin-mitek-ios",
+  "version": "1.0.4",
   "description": "MiSnap Plugin Create By Meedbankingclub",
   "cordova": {
-    "id": "cordova-plugin-misnap-ios",
+    "id": "cordova-plugin-mitek-ios",
     "platforms": [
       "ios"
     ]
