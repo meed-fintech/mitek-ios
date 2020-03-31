@@ -1,12 +1,16 @@
 {
-  "name": "MiSnapPlugin",
-  "version": "1.0.0",
-  "description": "MiSnap Plugin Create By Runi Kovoor",
+  "name": "cordova-plugin-misnap-ios",
+  "version": "1.0.2",
+  "description": "MiSnap Plugin Create By Meedbankingclub",
   "cordova": {
-    "id": "com.miteksystems.iosplugin.misnap",
+    "id": "cordova-plugin-misnap-ios",
     "platforms": [
       "ios"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meed-fintech/mitek-ios"
   },
   "keywords": [
     "cordova",
@@ -14,6 +18,6 @@
     "ios",
     "cordova-ios"
   ],
-  "author": "Runi Kovoor",
+  "author": "Meedbankingclub",
   "license": "ISC"
 }
